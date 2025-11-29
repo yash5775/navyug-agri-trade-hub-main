@@ -27,6 +27,22 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      {/* Top Bar */}
+      <div className="bg-gray-900 text-white py-2 text-sm">
+        <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-2">
+          <div className="flex items-center space-x-4">
+            <span>GST: <span className="font-semibold text-amber-400">24ABCDE1234F1Z5</span></span>
+            <span className="hidden md:inline text-gray-600">|</span>
+            <span>Licence: <span className="font-semibold text-amber-400">1234567890</span></span>
+          </div>
+          <div className="flex items-center space-x-4 text-gray-300 text-xs md:text-sm">
+            <a href="mailto:info@navyugenterprise.com" className="hover:text-amber-400 transition-colors">info@navyugenterprise.com</a>
+            <span>|</span>
+            <a href="tel:+917016055780" className="hover:text-amber-400 transition-colors">+91 7016055780</a>
+          </div>
+        </div>
+      </div>
+
       {/* Header */}
       <header className="bg-white shadow-sm sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
@@ -185,9 +201,9 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-6">
+          <div className="flex overflow-x-auto pb-6 gap-6 px-4 snap-x snap-mandatory md:flex-wrap md:justify-center md:overflow-visible md:px-0 -mx-4 md:mx-0 scrollbar-hide">
             {products.map((product) => (
-              <Card key={product.id} className="w-72 overflow-hidden hover:shadow-xl transition-shadow group">
+              <Card key={product.id} className="min-w-[18rem] w-72 flex-shrink-0 snap-center overflow-hidden hover:shadow-xl transition-shadow group">
                 <div className="relative overflow-hidden">
                   <img
                     src={product.image}
