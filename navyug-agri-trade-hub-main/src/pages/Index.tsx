@@ -270,7 +270,7 @@ const Index = () => {
                     />
                     <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                       <Button
-                        onClick={() => navigate(`/ product / ${product.id} `)}
+                        onClick={() => navigate(`/product/${product.id}`)}
                         className="bg-white text-gray-900 hover:bg-amber-50"
                       >
                         View Details
@@ -283,7 +283,7 @@ const Index = () => {
                       {product.description}
                     </p>
                     <Button
-                      onClick={() => navigate(`/ product / ${product.id} `)}
+                      onClick={() => navigate(`/product/${product.id}`)}
                       className="w-full bg-amber-600 hover:bg-amber-700 text-white md:hidden"
                     >
                       <ShoppingCart className="mr-2 h-4 w-4" />
